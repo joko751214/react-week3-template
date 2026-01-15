@@ -117,6 +117,8 @@ function App() {
   const openModal = () => {
     productModalRef.current.show();
     setProduct({...originProduct});
+    setIsEditing(false);
+    console.log('isEditing', isEditing);
   }
 
   const toastRef = useRef(null);
