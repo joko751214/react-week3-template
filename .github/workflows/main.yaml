@@ -28,7 +28,13 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      # 4️⃣ Build & Deploy
+      # 4️⃣ ✅ 設定 Git commit 身分（關鍵）
+      - name: Configure Git user
+        run: |
+          git config --global user.email "joko751214@gmail.com"
+          git config --global user.name "joko751214"
+
+      # 5️⃣ Build & Deploy
       - name: Build and deploy
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
