@@ -1,0 +1,13 @@
+name: CI / CD
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Github Pages
+        run: npm run deploy
+        run: echo '執行成功'
