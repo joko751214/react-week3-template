@@ -43,5 +43,6 @@ jobs:
       # 6️⃣ Build & Deploy
       - name: Build and deploy
         env:
+          VITE_API_BASE_URL: https://ec-course-api.hexschool.io/v2
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npm run deploy
